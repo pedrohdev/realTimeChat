@@ -4,7 +4,7 @@
   "description": "Chat em tempo real com Socket.io :speech_balloon:",
   "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node app"
   },
   "keywords": [],
   "author": "“pedrohdev” <pedrohenriquedos.s.v@gmail.com>",
