@@ -4,11 +4,7 @@ const handlebars = require('express-handlebars')
 const app = express()
 const port = 3000
 const server = require('http').createServer(app);
-const io = require('socket.io')(server, {
-    cors: {
-      origin: '*'
-    }
-})
+const io = require('socket.io')(server)
 
 app.use(express.static('public'))
 
