@@ -6,7 +6,7 @@ const port = 3000
 const server = require('http').createServer(app);
 const io = require('socket.io')(server, {
     cors: {
-        origin: '*'
+        origin: 'https://real-time-socket-chat.herokuapp.com'
     }
 })
 
