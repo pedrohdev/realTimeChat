@@ -5,12 +5,19 @@
                 <input autocomple="off" autofocus required type="text" id="name" class="form-control" placeholder="Digite seu nome">
             </div>
         </div>
-        <div class="render-parent row mt-2 p-2">
-            <div id="render" class="col-sm bg-light rounded"></div>
+        <div class="row mt-2 render-padding">
+            <div class="col-sm bg-light rounded">
+                <span onclick="clean()" style="cursor: pointer" class="badge badge-danger mt-2">Limpar</span>
+                <br>
+            </div>
+        </div>
+        <div class="render-parent row render-padding">
+            <div id="render" class="col-sm bg-light rounded">
+            </div>
         </div>
         <div class="row mt-2">
             <div class="col-sm">
-                <input autocomple="off" required id="message" type="text" class="form-control" placeholder="Mensagem">
+                <textarea placeholder="Mensagem" required class="form-control" id="message"></textarea>
             </div>
         </div>
         <div class="row mt-2">

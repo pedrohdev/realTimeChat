@@ -23,11 +23,8 @@ app.get('/', (req, res) => {
     res.render('chat')
 })
 
-let messages = []
-
 io.on('connection', socket => {
     socket.on('send', data => {
-        messages.push(data)
         io.emit('received', data)
     })
 })

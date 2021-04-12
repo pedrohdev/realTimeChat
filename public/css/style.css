@@ -1,3 +1,14 @@
 #render{
-    min-height: 300px;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.badge-danger {
+    color: #fff;
+    background-color: #dc3545;
+}
+
+.render-padding {
+    padding-left: 10px;
+    padding-right: 10px ;
 }

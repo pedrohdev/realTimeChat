@@ -3,9 +3,13 @@
 <script>
     const socket = io('https://real-time-socket-chat.herokuapp.com')
 
+    const escapeHTML = (msg) => {
+        return msg.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
     const renderMsg = (msg) => {
         document.querySelector('#render').innerHTML += `
-            <p class="lead mt-1"><strong>${msg.name}</strong> - ${msg.msg}</p>
+            <p class="lead mt-1"><strong>${escapeHTML(msg.name)}</strong> - ${escapeHTML(msg.msg)}</p>
         `   
     }
 
@@ -20,6 +24,8 @@
             msg: document.querySelector('#message').value
         }
 
+        document.querySelector('#message').value = ''
+
         if(chat.name.trim(' ').length == 0 || chat.msg.trim(' ').length == 0){
             document.querySelector('#alert').innerHTML = `
                 <div class="alert alert-warning" role="alert">
@@ -30,5 +36,9 @@
             document.querySelector('#alert').innerHTML = ``
             socket.emit('send', chat)
         }
+    }
+
+    const clean = () => {
+        document.querySelector('#render').innerHTML = ''
     }
 </script>
