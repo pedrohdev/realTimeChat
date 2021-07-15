@@ -1,5 +1,5 @@
 ##  Chat em tempo real com Socket.io :computer: :speech_balloon:
-### Como inciar :hammer:
+### Como iniciar :hammer:
 ``` nodemon app.js ```
 ### Depedências :file_folder:
 - Express | ``` npm install express ```
